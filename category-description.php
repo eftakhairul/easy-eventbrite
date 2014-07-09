@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WP Category Description
+ * Plugin Name: WP Adding Category Description
  * Plugin URI: https://github.com/eftakhairul/category-description
  * Description: A WordPress Project Management plugin. Simply it does everything and it was never been easier with WordPress.
  * Author: Eftakhairul Islam
