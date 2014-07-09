@@ -48,7 +48,8 @@
  */
 function add_category_description_filter($content)
 {
-    if (is_category() AND category_description()) {
+    if (is_category() AND
+        strlen(category_description()) > 0) {
         $content = '<div>' . category_description() . '</div>' . $content;
     }
 
