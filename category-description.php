@@ -47,7 +47,7 @@
  */
 function add_category_description_filter($content)
 {
-    if (is_category()) {
+    if (is_category() AND category_description()) {
         $content = '<div>' . category_description() . '</div>' . $content;
     }
 
