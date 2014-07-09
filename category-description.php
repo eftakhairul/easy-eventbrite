@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: WP Category Description
- * Plugin URI: http://wedevs.com/plugin/wp-project-manager/
+ * Plugin URI: https://github.com/eftakhairul/category-description
  * Description: A WordPress Project Management plugin. Simply it does everything and it was never been easier with WordPress.
  * Author: Eftakhairul Islam
  * Author URI: http://eftakhairul.com
