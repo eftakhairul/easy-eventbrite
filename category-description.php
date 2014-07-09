@@ -44,6 +44,7 @@
  *
  * @uses is_category()
  * @uses category_description()
+ * @link http://codex.wordpress.org/Function_Reference
  */
 function add_category_description_filter($content)
 {
