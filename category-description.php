@@ -56,4 +56,4 @@ function add_category_description_filter($content)
 }
 
 //Filter category page and add category's description at the top
-add_filter( 'the_content', 'my_the_content_filter' );
+add_filter( 'the_content', 'add_category_description_filter' );
