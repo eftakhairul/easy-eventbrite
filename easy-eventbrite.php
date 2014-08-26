@@ -64,7 +64,7 @@ function add_easy_eventbrite_event_filter($content)
          try{
             $events    = $eb_client->user_list_events(array('event_statuses' => 'live,started'));
          } catch(\Exception $e) {
-             $content = $content . 'No upcoming events found.';
+             $content = $content . '<h4 style="width:88%;max-width:1200px;margin:0 auto;">No upcoming events found at the moment.</h4><br><br>';
          }
 
          if(!empty($events)) {
@@ -72,17 +72,17 @@ function add_easy_eventbrite_event_filter($content)
             foreach($events->events AS $event )
             {
 
-              $singleEventContent =  "<div style='box-shadow:0 0.125em 0.275em 0 rgba(0, 0, 0, 0.075);border-radius:5px;background-color:#fff;padding:1.5em;border:1px solid #aaa;' class='x-column vc two-thirds eventbrite_event'>" .
+              $singleEventContent =  "<div style='width:88%;max-width:1200px;margin:0 auto;'><div style='box-shadow:0 0.125em 0.275em 0 rgba(0, 0, 0, 0.075);border-radius:5px;background-color:#fff;padding:1.5em;border:1px solid #aaa;margin-bottom:40px;' class='x-column vc two-thirds eventbrite_event'>" .
                                      "<img src='" . (empty($event->event->logo)? plugins_url('/easy-eventbrite/images/logo_events.jpg'):$event->event->logo)      . "' style='width:150px;' class='x-img x-img-rounded left' />" .
-                                     "<h2 class='h-custom-headline mtn h3'><span><a href='". $event->event->url . "'>" .$event->event->title . "</a></span></h2>" .
+                                     "<div><h2 class='h-custom-headline mtn h3'><span><a href='". $event->event->url . "'>" .$event->event->title . "</a></span></h2>" .
                                      "<p>" .
                                      "<i style='font-size:1em;margin-right:6px;' class='x-icon x-icon-calendar-o'></i> " .$event->event->start_date  . "<br>" .
                                      "<i style='font-size:1em;margin-right:6px;' class='x-icon x-icon-map-marker'></i>" . $event->event->venue->name .
                                      "</p>" .
-                                     "<p>" . get_snippet(strip_tags($event->event->description), 35) .
+                                     "<p>" . get_snippet(strip_tags($event->event->description), 26) .
                                      " ...<a href='" . $event->event->url .  "'> more details"  .
-                                     "</a></p>" .
-                                     "</div>";
+                                     "</a></p></div>" .
+                                     "</div></div>";
 
                 $content =  $content . $singleEventContent;
 
